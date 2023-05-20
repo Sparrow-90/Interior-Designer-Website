@@ -43,11 +43,12 @@ html{
 
 .change .line{
     background-color: rgba(0,0,0,0.8);
-    transition: .5s;
+    
 }
 .change .line-1{
     transform: rotate(45deg)
     translate(0.3rem, 0.8rem);
+    transition: 1s;
 }
 
 .change .line-2{
@@ -58,6 +59,7 @@ html{
 .change .line-3{
     transform: rotate(-45deg)
     translate(0.3rem, -0.8rem);
+    transition: 1               s;
 }
 
 .hamburger-menu span {
