@@ -1,5 +1,5 @@
  @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
-'
+
 /* font-family: 'Baloo Da 2, cursive;
 font-family: 'Josefin Slab', serif;
 font-family: 'Mulish', sans-serif; */
@@ -16,6 +16,7 @@ font-family: 'Mulish', sans-serif; */
 html{
     font-size: 62.5%;
 }
+
 .hamburger-menu{
     width: 3rem;
     height: 3rem;
@@ -32,6 +33,7 @@ html{
 
 .change .hamburger-menu{
     right: 33rem;
+    z-index: 3;
 }
 
 .line{
@@ -48,7 +50,7 @@ html{
 .change .line-1{
     transform: rotate(45deg)
     translate(0.3rem, 0.8rem);
-    transition: 1s;
+    transition: .5s;
 }
 
 .change .line-2{
@@ -59,7 +61,7 @@ html{
 .change .line-3{
     transform: rotate(-45deg)
     translate(0.3rem, -0.8rem);
-    transition: 1               s;
+    transition: .5s;               s;
 }
 
 .hamburger-menu span {
@@ -78,11 +80,13 @@ html{
     opacity: 0;
     visibility: hidden;
     transition: all .5s;
+    
 }
 
 .change .hamburger-menu:hover span{
     opacity: 1;
     visibility: visible;
+    
 }
 
 .hamburger-menu span::before{
@@ -95,6 +99,7 @@ html{
     top: 50%;
     left: -2rem;
     transform: translateY(-50%);
+    
 }
 
 header{
@@ -195,6 +200,7 @@ header{
     right: -40rem;
     background-color: white;
     transition: .5s;
+    z-index: 2;
 }
 
 .change .sidebar{
@@ -466,4 +472,119 @@ header{
     color: #eee;
     border-radius: .3rem;
     box-shadow: 0 .1rem .8rem rgba(0,0,0,0.4);
+}
+
+.contact{
+    width: 100%;
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper{
+    width: 60%;
+    height: 75rem;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 3rem 7rem rgba(0,0,0,0.4);
+}
+
+.content-left{
+    width: 35%;
+    background: linear-gradient(rgba(15, 15, 15, .6), rgba(22, 22, 22, .9)), url(/img/contact-bg.jpg) center no-repeat ;
+    background-size: cover;
+}
+
+.content-right{
+    width: 65%;
+    background-color: #eee;
+    padding: 3rem 10rem 10rem 10rem;
+}
+
+.contact-heading{
+    font-family: 'Baloo Da 2',serif;
+    font-size: 6rem;
+    font-weight: 300;
+    color: #272727;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.content-right form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group{
+    position: relative;
+}
+
+.field{
+    width: 45rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: .2rem dashed #636363;
+    margin: 3rem 0;
+    padding: 1rem 1rem 1rem 0;
+    font-family: 'Mulish', sans-serif; 
+    font-size: 1.6rem;
+    color: #4b4b4b;
+}
+
+.input-group input{
+    height: 4rem;
+}
+
+.input-group textarea{
+    max-height: 7rem;
+    max-width: 45rem;
+}
+
+.field:focus{
+    border-bottom-style: solid;
+}
+
+.input-group label{
+    position: absolute;
+    left: 0;
+    font-family: 'Baloo Da 2',serif;
+    font-size: 1.8rem;
+    color: #4b4b4b;
+    text-transform: uppercase;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.input-label {
+    bottom: 3rem;
+}
+
+.message{
+    bottom: 6rem;
+}
+
+.field:focus ~ label{
+    transform: translateY(-3rem);
+    font-size: 1.2rem;
+}
+
+.submit-btn{
+    width: 45rem;
+    height: 5rem;
+    background-color: #c29525;
+    color: white;
+    border: none;
+    margin-top: 2rem;
+    font-family: 'Mulish', sans-serif; 
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    cursor: pointer;
+    text-shadow: 0 .1rem .3rem rgba(0,0,0, 0.5);
+    box-shadow: 0 .1rem .3rem rgba(0,0,0, 0.5);;
 }
